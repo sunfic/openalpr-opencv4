@@ -1,3 +1,8 @@
+The offical openalpr now support opencv4. now sync with offical openalpr for that change. 
+
+Updated to support Tesseract5. 
+
+
 openalpr
 ========
 
