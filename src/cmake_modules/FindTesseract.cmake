@@ -33,29 +33,6 @@ find_path(Tesseract_INCLUDE_CCSTRUCT_DIR
         ${Tesseract_PKGCONF_INCLUDE_DIRS}
 		${CMAKE_SOURCE_DIR}/../libraries/tesseract-ocr/ccstruct/
 )
-find_path(Tesseract_INCLUDE_CCMAIN_DIR
-  NAMES thresholder.h
-  HINTS "/usr/include"
-        "/usr/include/tesseract"
-        "/usr/local/include"
-        "/usr/local/include/tesseract"
-        "/opt/local/include"
-        "/opt/local/include/tesseract"
-        ${Tesseract_PKGCONF_INCLUDE_DIRS}
-		${CMAKE_SOURCE_DIR}/../libraries/tesseract-ocr/ccmain/
-)
-find_path(Tesseract_INCLUDE_CCUTIL_DIR
-  NAMES platform.h
-  HINTS "/usr/include"
-        "/usr/include/tesseract"
-        "/usr/local/include"
-        "/usr/local/include/tesseract"
-        "/opt/local/include"
-        "/opt/local/include/tesseract"
-        ${Tesseract_PKGCONF_INCLUDE_DIRS}
-		${CMAKE_SOURCE_DIR}/../libraries/tesseract-ocr/ccutil/
-)
-
 
 # Finally the library itself
 find_library(Tesseract_LIB
@@ -83,8 +60,6 @@ find_library(Leptonica_LIB
 set(Tesseract_PROCESS_INCLUDES 
     Tesseract_INCLUDE_BASEAPI_DIR 
 	Tesseract_INCLUDE_CCSTRUCT_DIR
-	Tesseract_INCLUDE_CCMAIN_DIR
-	Tesseract_INCLUDE_CCUTIL_DIR
 	Tesseract_INCLUDE_DIRS)
 set(Tesseract_PROCESS_LIBS Tesseract_LIB Leptonica_LIB Tesseract_LIBRARIES)
 libfind_process(Tesseract)
